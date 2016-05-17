@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Crunchy Crunchy Crunchy FO0O0O0O0O0O0O0O0D !{% endblock %}
+{% block content %}
+
+<div id="chart"></div>
+
+<div ng-app="lifeExpectancyAnalysis" ng-controller="lifeExpectancyController">
+	<div class="page-header">
+		<form name="myForm">
+			<select name="repeatSelect" id="repeatSelect" ng-model="data.repeatSelect" ng-change="getGraphInfo()">
+				<option ng-repeat="option in data.availableOptions" value="{{option.id|angular}}">{{option.name|angular}}</option>
+			</select>
+		</form>
+	</div>
+</div>
+{% endblock %}
+{% block scripts %}
+	{{ super() }}
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="/static/controller/crunchyController.js"></script>
+	<script src="/static/highChart/scatterPlot.js"></script>
+{% endblock %}
