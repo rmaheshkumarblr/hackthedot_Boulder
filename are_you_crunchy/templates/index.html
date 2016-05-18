@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Are you CRUNCHY!!!</title>
+    <link rel="stylesheet" href="/static/bower_components/bootstrap/dist/css/bootstrap.min.css" charset="utf-8">
+    <script type="text/javascript" src="/static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/crunchy.js"></script>
+    <style>
+      .crunchy {
+        color: #00FF00;
+      }
+      .notcrunchy {
+        color: #FF0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row" style="margin: 0 !important">
+      <div class="input-group">
+        <input type="text" id="twUserId" class="form-control" placeholder="Enter Twitter UserID">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" id="isCrunchyBtn" type="button">Are You Crunchy?</button>
+        </span>
+      </div>
+      <br /><br />
+      <h4 style="display: none;">Crunchiness Score</h4>
+      <p id="score">
+
+      </p>
+      <br /><br />
+      <p id="isCrunchy">
+
+      </p>
+    </div>
+  </body>
+</html>
